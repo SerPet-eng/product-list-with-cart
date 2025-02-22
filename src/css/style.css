@@ -1,0 +1,570 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+@font-face {
+  font-family: "Red Hat Italic";
+  src: url("../../assets/fonts/RedHatText-Italic-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Red Hat";
+  src: url("../../assets/fonts/RedHatText-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Red Hat Bold";
+  src: url("../../assets/fonts/static/RedHatText-Bold.ttf");
+}
+@font-face {
+  font-family: "Red Hat Regular";
+  src: url("../../assets/fonts/static/RedHatText-Regular.ttf");
+}
+@font-face {
+  font-family: "Red Hat SemiBold";
+  src: url("../../assets/fonts/static/RedHatText-SemiBold.ttf");
+}
+body {
+  font-family: "Red Hat Regular";
+  background-color: hsl(13, 31%, 94%);
+}
+
+@font-face {
+  font-family: "Red Hat Italic";
+  src: url("../../assets/fonts/RedHatText-Italic-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Red Hat";
+  src: url("../../assets/fonts/RedHatText-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Red Hat Bold";
+  src: url("../../assets/fonts/static/RedHatText-Bold.ttf");
+}
+@font-face {
+  font-family: "Red Hat Regular";
+  src: url("../../assets/fonts/static/RedHatText-Regular.ttf");
+}
+@font-face {
+  font-family: "Red Hat SemiBold";
+  src: url("../../assets/fonts/static/RedHatText-SemiBold.ttf");
+}
+.main {
+  display: grid;
+  place-content: center;
+  min-height: 100%;
+  gap: 1rem;
+  padding: 1rem;
+  position: relative;
+  overflow-x: hidden;
+  z-index: -1;
+}
+.main .main_title {
+  font-family: "Red Hat Bold";
+  color: hsl(14, 65%, 9%);
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.blur {
+  position: fixed; /* Stay in place */
+  z-index: 20; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+@font-face {
+  font-family: "Red Hat Italic";
+  src: url("../../assets/fonts/RedHatText-Italic-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Red Hat";
+  src: url("../../assets/fonts/RedHatText-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Red Hat Bold";
+  src: url("../../assets/fonts/static/RedHatText-Bold.ttf");
+}
+@font-face {
+  font-family: "Red Hat Regular";
+  src: url("../../assets/fonts/static/RedHatText-Regular.ttf");
+}
+@font-face {
+  font-family: "Red Hat SemiBold";
+  src: url("../../assets/fonts/static/RedHatText-SemiBold.ttf");
+}
+.cards {
+  position: relative;
+}
+.cards .picture {
+  border: 3px solid red;
+  border-radius: 10px;
+}
+.cards .image {
+  border-radius: 10px;
+}
+.cards .add-to-cart {
+  border: 1px solid hsl(14, 86%, 42%);
+  border-radius: 20px 20px;
+  padding: 0.75rem 1.5rem;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Red Hat SemiBold";
+  color: hsl(14, 65%, 9%);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.cards .button-group {
+  background-color: hsl(14, 86%, 42%);
+  border-radius: 30px 30px;
+  padding: 0.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  font-family: "Red Hat Bold";
+  color: hsl(20, 50%, 98%);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.cards .button-group .button {
+  border: 3px solid hsl(20, 50%, 98%);
+  background-color: hsl(14, 86%, 42%);
+}
+.cards .button-group .increment {
+  padding: 1rem;
+  border-radius: 50% 50%;
+  cursor: pointer;
+}
+.cards .button-group .increment:active {
+  background-color: hsl(20, 50%, 98%);
+  fill: hsl(14, 86%, 42%);
+}
+.cards .button-group .decrement {
+  padding: 1.25rem 1rem;
+  border-radius: 50% 50%;
+  cursor: pointer;
+}
+.cards .button-group .decrement:active {
+  background-color: hsl(20, 50%, 98%);
+  fill: hsl(14, 86%, 42%);
+}
+.cards .description {
+  margin-top: 1.5rem;
+}
+.cards .description .description_category {
+  color: hsl(14, 25%, 72%);
+  font-size: 16px;
+}
+.cards .description .description_name {
+  font-family: "Red Hat Bold";
+  color: hsl(14, 65%, 9%);
+  font-size: 1.25rem;
+}
+.cards .description .description_price {
+  font-family: "Red Hat SemiBold";
+  color: hsl(14, 86%, 42%);
+  font-size: 1.25rem;
+}
+
+@font-face {
+  font-family: "Red Hat Italic";
+  src: url("../../assets/fonts/RedHatText-Italic-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Red Hat";
+  src: url("../../assets/fonts/RedHatText-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Red Hat Bold";
+  src: url("../../assets/fonts/static/RedHatText-Bold.ttf");
+}
+@font-face {
+  font-family: "Red Hat Regular";
+  src: url("../../assets/fonts/static/RedHatText-Regular.ttf");
+}
+@font-face {
+  font-family: "Red Hat SemiBold";
+  src: url("../../assets/fonts/static/RedHatText-SemiBold.ttf");
+}
+.section-cart {
+  border-radius: 10px;
+  padding: 2rem;
+  background-color: hsl(20, 50%, 98%);
+}
+.section-cart .cart_title {
+  font-family: "Red Hat Bold";
+  font-size: 1.75rem;
+  color: hsl(14, 86%, 42%);
+}
+.section-cart .cart {
+  border-bottom: 1px solid hsl(12, 20%, 44%);
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+.section-cart .cart .cart-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.section-cart .cart-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.section-cart .cart-info .cart-quantity {
+  font-family: "Red Hat SemiBold";
+  font-size: 1.25rem;
+  color: hsl(14, 86%, 42%);
+}
+.section-cart .cart-info .cart-price {
+  color: hsl(0, 0%, 55%);
+}
+.section-cart .cart-info .cart-totalPrice {
+  font-family: "Red Hat SemiBold";
+  color: hsl(0, 0%, 37%);
+}
+.section-cart .deleteItem {
+  border: 2px solid hsl(0, 0%, 37%);
+  border-radius: 20px;
+  height: 50%;
+  padding: 0.5rem;
+  margin: 0;
+}
+.section-cart .empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem auto;
+}
+.section-cart .empty .empty_image {
+  max-width: 50%;
+}
+.section-cart .empty .empty_title {
+  font-family: "Red Hat SemiBold";
+  color: hsl(7, 20%, 60%);
+}
+
+@font-face {
+  font-family: "Red Hat Italic";
+  src: url("../../assets/fonts/RedHatText-Italic-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Red Hat";
+  src: url("../../assets/fonts/RedHatText-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Red Hat Bold";
+  src: url("../../assets/fonts/static/RedHatText-Bold.ttf");
+}
+@font-face {
+  font-family: "Red Hat Regular";
+  src: url("../../assets/fonts/static/RedHatText-Regular.ttf");
+}
+@font-face {
+  font-family: "Red Hat SemiBold";
+  src: url("../../assets/fonts/static/RedHatText-SemiBold.ttf");
+}
+.order {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5rem auto;
+}
+.order .order-text {
+  font-family: "Red Hat SemiBold";
+  color: hsl(14, 65%, 9%);
+}
+.order .order-total-price {
+  font-family: "Red Hat Bold";
+  font-size: 1.5rem;
+  color: hsl(14, 65%, 9%);
+}
+
+.reminders {
+  border-radius: 10px;
+  background-color: hsl(13, 31%, 94%);
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+.reminders .reminder-text {
+  font-size: 90%;
+}
+
+.confirm-btn-section {
+  margin: 1.75rem auto auto auto;
+}
+.confirm-btn-section .confirm-order-btn {
+  width: 100%;
+  border-radius: 50px 50px;
+  border: none;
+  background-color: hsl(14, 86%, 42%);
+  font-family: "Red Hat SemiBold";
+  color: hsl(20, 50%, 98%);
+  padding: 0.9rem;
+  cursor: pointer;
+}
+.confirm-btn-section .confirm-order-btn:active {
+  background-color: hsl(14, 65%, 9%);
+}
+
+@font-face {
+  font-family: "Red Hat Italic";
+  src: url("../../assets/fonts/RedHatText-Italic-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Red Hat";
+  src: url("../../assets/fonts/RedHatText-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Red Hat Bold";
+  src: url("../../assets/fonts/static/RedHatText-Bold.ttf");
+}
+@font-face {
+  font-family: "Red Hat Regular";
+  src: url("../../assets/fonts/static/RedHatText-Regular.ttf");
+}
+@font-face {
+  font-family: "Red Hat SemiBold";
+  src: url("../../assets/fonts/static/RedHatText-SemiBold.ttf");
+}
+.order-confirmed {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: hsl(20, 50%, 98%);
+  border-radius: 10px 10px 0 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-width: 100%;
+  overflow-y: scroll;
+  z-index: 99;
+}
+.order-confirmed .order-confirmed-icon {
+  width: 10%;
+}
+.order-confirmed .order-confirmed-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 200px;
+  overflow-y: scroll;
+}
+.order-confirmed .order-confirmed-message {
+  max-width: 70%;
+}
+.order-confirmed .order-confirmed-message .order-confirmed-title {
+  font-family: "Red Hat Bold";
+  font-size: 2.5rem;
+  color: hsl(14, 65%, 9%);
+  line-height: 3rem;
+}
+.order-confirmed .order-confirmed-cart {
+  display: flex;
+  padding: 1rem 0 1rem 0;
+  border-bottom: 1px solid hsl(12, 20%, 44%);
+}
+.order-confirmed .order-confirmed-cart .order-confirmed-image {
+  max-width: 20%;
+  border-radius: 10px;
+}
+.order-confirmed .order-confirmed-cart .order-confirmed-cart-content {
+  margin-left: 1rem;
+}
+.order-confirmed .order-confirmed-cart .order-confirmed-cart-content .order-confirmed-cart-quantity {
+  font-family: "Red Hat Bold";
+  color: hsl(14, 86%, 42%);
+}
+.order-confirmed .order-confirmed-cart .order-confirmed-cart-content .order-confirmed-cart-price {
+  font-family: "Red Hat SemiBold";
+  color: hsl(12, 20%, 44%);
+}
+.order-confirmed .order-confirmed-cart .order-confirmed-cart-info {
+  display: flex;
+  gap: 1rem;
+}
+.order-confirmed .order-confirmed-cart .order-confirmed-cart-totalPrice {
+  font-family: "Red Hat Bold";
+  font-size: 1.5rem;
+  color: hsl(14, 65%, 9%);
+  margin-left: auto;
+}
+.order-confirmed .order-confirmed-total-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.order-confirmed .order-confirmed-total-section .order-confirmed-text {
+  color: hsl(14, 65%, 9%);
+}
+.order-confirmed .order-confirmed-total-section .order-confirmed-total-price {
+  font-family: "Red Hat Bold";
+  font-size: 2rem;
+  color: hsl(14, 65%, 9%);
+}
+.order-confirmed .order-confirmed-btn-section {
+  display: grid;
+}
+.order-confirmed .order-confirmed-btn-section .start-new-order-btn {
+  background-color: hsl(14, 86%, 42%);
+  border: none;
+  border-radius: 50px 50px;
+  font-family: "Red Hat SemiBold";
+  color: hsl(20, 50%, 98%);
+  padding: 1rem;
+  cursor: pointer;
+}
+.order-confirmed .order-confirmed-btn-section .start-new-order-btn:active {
+  background-color: hsl(14, 65%, 9%);
+}
+
+@media only screen and (min-width: 900px) {
+  .main-section {
+    display: flex;
+    gap: 1rem;
+  }
+  .section-card {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(30%, 300px));
+    gap: 1rem;
+  }
+  .section-cart {
+    max-height: 40%;
+  }
+  .box {
+    overflow-y: scroll;
+    height: 150px;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .order-confirmed {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: auto;
+    right: auto;
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+    overflow: auto;
+  }
+}
+@font-face {
+  font-family: "Red Hat Italic";
+  src: url("../../assets/fonts/RedHatText-Italic-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Red Hat";
+  src: url("../../assets/fonts/RedHatText-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Red Hat Bold";
+  src: url("../../assets/fonts/static/RedHatText-Bold.ttf");
+}
+@font-face {
+  font-family: "Red Hat Regular";
+  src: url("../../assets/fonts/static/RedHatText-Regular.ttf");
+}
+@font-face {
+  font-family: "Red Hat SemiBold";
+  src: url("../../assets/fonts/static/RedHatText-SemiBold.ttf");
+}
+@media only screen and (min-width: 900px) {
+  .cards .add-to-cart {
+    padding: 0.5rem 1rem;
+  }
+  .cards .button-group {
+    padding: 0.5rem;
+  }
+  .cards .button-group .button {
+    border: 2px solid hsl(20, 50%, 98%);
+  }
+  .cards .button-group .increment {
+    padding: 0.3rem;
+  }
+  .cards .button-group .decrement {
+    padding: 0.5rem 0.25rem;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,6 @@
+@use '../variables/variables.scss' as *;
+
+body {
+  font-family: $RedHatRegular;
+  background-color: $primaryRose-100;
+}

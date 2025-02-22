@@ -1,0 +1,13 @@
+@import './reset';
+@import './main/body';
+@import './main/main';
+@import './main/cards';
+@import './main/side_cart';
+@import './main/order';
+@import './main/order_confirmed';
+
+// MEDIA QUERIES
+@import './media_query/body_query';
+@import './media_query/main_query';
+@import './media_query/order_confirm_query';
+@import './media_query/cards_query';

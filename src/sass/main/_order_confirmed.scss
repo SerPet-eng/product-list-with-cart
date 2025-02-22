@@ -1,0 +1,103 @@
+@use '../variables/variables.scss' as *;
+
+.order-confirmed {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: $primaryRose-50;
+  border-radius: 10px 10px 0 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-width: 100%;
+
+  overflow-y: scroll;
+  z-index: 99;
+
+  .order-confirmed-icon {
+    width: 10%;
+  }
+
+  .order-confirmed-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    height: 200px;
+    overflow-y: scroll;
+  }
+
+  .order-confirmed-message {
+    max-width: 70%;
+    .order-confirmed-title {
+      font-family: $RedHatBold;
+      font-size: 2.5rem;
+      color: $primaryRose-900;
+      line-height: 3rem;
+    }
+  }
+
+  .order-confirmed-cart {
+    display: flex;
+    padding: 1rem 0 1rem 0;
+    border-bottom: 1px solid $primaryRose-500;
+    .order-confirmed-image {
+      max-width: 20%;
+      border-radius: 10px;
+    }
+    .order-confirmed-cart-content {
+      margin-left: 1rem;
+      .order-confirmed-cart-quantity {
+        font-family: $RedHatBold;
+        color: $primaryRed;
+      }
+      .order-confirmed-cart-price {
+        font-family: $RedHatSemiBold;
+        color: $primaryRose-500;
+      }
+    }
+    .order-confirmed-cart-info {
+      display: flex;
+      gap: 1rem;
+    }
+    .order-confirmed-cart-totalPrice {
+      font-family: $RedHatBold;
+      font-size: 1.5rem;
+      color: $primaryRose-900;
+      margin-left: auto;
+    }
+  }
+
+  .order-confirmed-total-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .order-confirmed-text {
+      color: $primaryRose-900;
+    }
+    .order-confirmed-total-price {
+      font-family: $RedHatBold;
+      font-size: 2rem;
+      color: $primaryRose-900;
+    }
+  }
+
+  .order-confirmed-btn-section {
+    display: grid;
+    .start-new-order-btn {
+      background-color: $primaryRed;
+      border: none;
+      border-radius: 50px 50px;
+      font-family: $RedHatSemiBold;
+      color: $primaryRose-50;
+      padding: 1rem;
+
+      cursor: pointer;
+      &:active {
+        background-color: $primaryRose-900;
+      }
+    }
+  }
+}

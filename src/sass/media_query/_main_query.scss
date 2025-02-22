@@ -1,0 +1,20 @@
+@media only screen and (min-width: 900px) {
+  .main-section {
+    display: flex;
+    gap: 1rem;
+  }
+  .section-card {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(30%, 300px));
+    gap: 1rem;
+  }
+
+  .section-cart {
+    max-height: 40%;
+  }
+
+  .box {
+    overflow-y: scroll;
+    height: 150px;
+  }
+}

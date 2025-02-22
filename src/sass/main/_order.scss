@@ -1,0 +1,49 @@
+@use '../variables/variables.scss' as *;
+
+.order {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5rem auto;
+  .order-text {
+    font-family: $RedHatSemiBold;
+    color: $primaryRose-900;
+  }
+
+  .order-total-price {
+    font-family: $RedHatBold;
+    font-size: 1.5rem;
+    color: $primaryRose-900;
+  }
+}
+
+.reminders {
+  border-radius: 10px;
+  background-color: $primaryRose-100;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 0.5rem;
+
+  .reminder-text {
+    font-size: 90%;
+  }
+}
+
+.confirm-btn-section {
+  margin: 1.75rem auto auto auto;
+  .confirm-order-btn {
+    width: 100%;
+    border-radius: 50px 50px;
+    border: none;
+    background-color: $primaryRed;
+    font-family: $RedHatSemiBold;
+    color: $primaryRose-50;
+    padding: 0.9rem;
+
+    cursor: pointer;
+    &:active {
+      background-color: $primaryRose-900;
+    }
+  }
+}

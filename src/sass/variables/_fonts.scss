@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'Red Hat Italic';
+  src: url('../../assets/fonts/RedHatText-Italic-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'Red Hat';
+  src: url('../../assets/fonts/RedHatText-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'Red Hat Bold';
+  src: url('../../assets/fonts/static/RedHatText-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Red Hat Regular';
+  src: url('../../assets/fonts/static/RedHatText-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Red Hat SemiBold';
+  src: url('../../assets/fonts/static/RedHatText-SemiBold.ttf');
+}
+
+$RedHatItalic: 'Red Hat Italic';
+$RedHat: 'Red Hat';
+$RedHatBold: 'Red Hat Bold';
+$RedHatRegular: 'Red Hat Regular';
+$RedHatSemiBold: 'Red Hat SemiBold';
